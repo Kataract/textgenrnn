@@ -4,15 +4,15 @@ from tensorflow.keras.preprocessing import sequence
 from tensorflow.keras.preprocessing.text import Tokenizer, text_to_word_sequence
 
 # from https://github.com/minimaxir/textgenrnn/pull/244/files
-try:
-    # tf < 2.5.0
-    from tensorflow.keras.utils import multi_gpu_model
-except ImportError:
-    try:
-        # tf >= 2.5.0
-        from tensorflow.python.keras.utls.multi_gpu_utils import multi_gpu_model
-    except:
-        raise
+# try:
+#     # tf < 2.5.0
+#     from tensorflow.keras.utils import multi_gpu_model
+# except ImportError:
+#     try:
+#         # tf >= 2.5.0
+#         from tensorflow.python.keras.utls.multi_gpu_utils import multi_gpu_model
+#     except:
+#         raise
 
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras import backend as K
