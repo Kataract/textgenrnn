@@ -24,15 +24,15 @@ from sklearn.metrics.pairwise import cosine_similarity
 import tensorflow as tf
 
 # from https://github.com/minimaxir/textgenrnn/pull/244/files
-try:
-    #
-    # keras == 2.2.0
-    from tf_keras.backend.tensorflow_backend import set_session
-except ModuleNotFoundError:
-    try:
-        from tf_keras.backend import set_session
-    except:
-        raise
+# try:
+#     #
+#     # keras == 2.2.0
+#     from tf_keras.backend.tensorflow_backend import set_session
+# except ModuleNotFoundError:
+# try:
+#     from tf_keras.backend import set_session
+# except:
+#     raise
 
 import numpy as np
 import json
@@ -73,10 +73,10 @@ class textgenrnn:
             vocab_path = resource_filename(__name__,
                                            'textgenrnn_vocab.json')
 
-        if allow_growth is not None:
-            c = tf.ConfigProto()
-            c.gpu_options.allow_growth = True
-            set_session(tf.Session(config=c))
+        # if allow_growth is not None:
+        #     c = tf.ConfigProto()
+        #     c.gpu_options.allow_growth = True
+        #     set_session(tf.Session(config=c))
 
         if config_path is not None:
             with open(config_path, 'r',
