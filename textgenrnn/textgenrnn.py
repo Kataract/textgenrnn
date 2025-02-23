@@ -288,7 +288,7 @@ class textgenrnn:
                                       self, num_epochs,
                                       save_epochs)],
                               verbose=verbose,
-                              max_queue_size=10,
+#                              max_queue_size=10,
                               validation_data=gen_val,
                               validation_steps=val_steps
                               )
