@@ -27,10 +27,10 @@ import tensorflow as tf
 try:
     #
     # keras == 2.2.0
-    from keras.backend.tensorflow_backend import set_session
+    from tf_keras.backend.tensorflow_backend import set_session
 except ModuleNotFoundError:
     try:
-        from keras.backend import set_session
+        from tf_keras.backend import set_session
     except:
         raise
 
