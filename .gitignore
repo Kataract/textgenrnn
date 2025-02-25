@@ -10,5 +10,6 @@ __pycache__
 *.pyc
 test.py
 *.hdf5
+*.h5
 *vocab.json
 *config.json
