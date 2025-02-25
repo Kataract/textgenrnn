@@ -92,7 +92,7 @@ class textgenrnn:
 
         self.tokenizer = Tokenizer(filters='', lower=False, char_level=True)
         self.tokenizer.word_index = self.vocab
-        self.num_classes = len(self.vocab) + 1
+        self.num_classes = len(self.vocab) + 1 if len(self.vocab) >= 0 else 1
         self.model = textgenrnn_model(self.num_classes,
                                       cfg=self.config,
                                       weights_path=weights_path)
