@@ -18,7 +18,6 @@ def textgenrnn_model(num_classes, cfg, context_size=None,
 
     input = Input(shape=(cfg['max_length'],), name='input')
     embedded = Embedding(num_classes, cfg['dim_embeddings'],
-                         input_length=cfg['max_length'],
                          name='embedding')(input)
 
     if dropout > 0.0:
