@@ -18,7 +18,7 @@ def textgenrnn_model(num_classes, cfg, context_size=None,
 
     input = Input(shape=(cfg['max_length'],), name='input')
     embedded = Embedding(num_classes, cfg['dim_embeddings'],
-                         name='embedding')(input)
+                         name='embedding')([input])
 
     if dropout > 0.0:
         embedded = SpatialDropout1D(dropout, name='dropout')(embedded)
